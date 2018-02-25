@@ -1,0 +1,148 @@
+Name:
+Description: as many lines
+Actions: as many lines
+move
+description of the move
+health add
+Effect:
+target
+state
+Activate List: (optional)
+Acquirable: yes/no
+
+Name: key of janus
+Descriptions:
+It is an old wooden key of Janus. It is said to be able to open any lock!
+Actions:
+get
+You reach to the key and get it. The power of Janus increases your health
+20
+use
+You hacked the book open. This seems like cheating!  The figures on the book glow and move! Above it, the air start to crack.  Yes, there is a crack in mid air, and it's getting wider!!!
+0
+Effect: 1 book of thoth
+Open: room of wizard
+Acquirable: yes
+
+Name: golden sun
+Descriptions:
+A glowing floating piece of gold. It's so gorgeous!
+Looks nice, but hot!!!
+Actions:
+try
+Hot!!
+-40
+Effect: 1 golden sun
+get
+Icarus lost his life just because he flew too close to the Sun. Phaethon died for riding Helios's chariot.  Now here you are. No one ever told you not to mess with the sun?  The sun instantly burns down your entire body!!!!
+-100000
+Acquirable: no
+
+Name: silver moon
+Descriptions:
+It emits a pleasant, refreshing feeling.
+Actions:
+get
+Glowing moon is now in your palm.
+20
+use
+The room is suddenly filled with moonlight.  "A hidden path to the West from the Tales of Time has been opened. You might not see it, but have faith in me!" says Artemis.  The moon disappear and room returns to normal.
+10
+Open: bifrost bridge
+touch
+Cold soft moon shakes!
+0
+Acquirable: yes
+
+Name: jormungandr
+Description:
+The sea serpent that is long enough to surround the earth and grasp its own tail.
+Actions:
+get
+So, here's the thing. Snakes bite. Surprisingly, so do serpents.  It's deadly for even gods. So we all see where this's going.
+-100000
+Acquirable: no
+
+Name: yggdrasil
+Description:
+The world tree Yggdrasil connecting the nine worlds.  It's just like a small version of the Universe with its own sun, moon, and stars!!  Wrapping around Midgard is the World Serpent Jormungandr.
+Actions:
+Activate List:
+golden sun
+silver moon
+jormungandr
+Acquirable: no
+
+Name: moon pillar
+Description:
+A plain white pillar as tall as my belly.  There is a goddess with her bow and arrows, along with her deers carved on the surface of the pillar.
+Actions:
+Activate List:
+silver moon
+Acquirable: no
+
+Name: stars
+Description:
+Same old stars on the sky every night. It just looks so close!
+Actions:
+get
+They are a bit further then our grasp!
+0
+touch
+They are a bit further then our grasp!
+0
+reach
+You yearn toward the stars. They are out of your reach.  You yearn close.  Oops, you lose your grips and fall out of the bridge, to the stars!
+-100000
+Acquirable: no
+
+Name: book of thoth
+Description:
+A book made of stone, carved with ancient Egyptian figures. It's locked!  Apparently there is a riddle on it to open the book!  How? I just know! But what I don't know is Egyptian!
+The book of knowledge open up a gate to another place in mid air!
+Actions:
+Activate List:
+key of janus
+Acquirable: no
+
+Name: wizard
+Des:
+The almighty wizard who guards the mightiest power blessed by of all Gods!  He opens his eyes and I can see the whole Universe through them.
+Cast the spell and take the power you long desire!
+Actions:
+check
+"You have proved yourself by being right here in front of me!  I see your potential, the potential of a savior!  Here I grants you have to do is cast the spell!" says the Wizard!  He waves his staff, and thunder strikes from there to the ground, raising a stone with script all over it!
+0
+Effect: 1 wizard
+Activate List:
+stone baetylus
+Acquirable: no
+
+Name: stone baetylus
+Des:
+On the stone it says:  ----------------------------------------------------  ----------------------------------------------------  Super power comes great responsibility  Hold your head high, show your might  Admire the courage, admire life  Zoom in and out of dead and life  Along with comrades we might  Mighty of kindness will never die  ----------------------------------------------------
+----------------------------------------------------  Super power comes great responsibility  Hold your head high, show your might  Admire the courage, admire life  Zoom in and out of dead and life  Along with comrades we might  Mighty of kindness will never die
+Actions:
+check
+----------------------------------------------------
+0
+Effect: 1 stone baetylus
+Open: city
+Acquirable: no
+
+Name: octopus
+Des:
+The giant octopus with tentacles is destroying the city!!
+AAAA!!
+Actions:
+check
+
+0
+hit
+You hit the monster with an insane amount of power. Yet, it doesn't do much cuz...  it's just freaking huge!!!  It hits you back!
+-300
+blast
+You accumulate a huge amount of power and beam the monster with all the power of cosmic!!!!
+0
+Effect: 1 octopus
+Acquirable: no
