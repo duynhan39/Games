@@ -1,0 +1,92 @@
+Name:
+Activated (optional)
+Long Description:
+Short Description:
+Items List: (optional)
+Paths:
+
+Name: tales of time
+Activated
+Long Description:
+An empty room with walls filled with stories of battles between Gods and Demons.  The ceiling is painted with moving stars and moon, along with fallen angels and shredded demons.  There are paths to North and to Northwest.
+Short Description:
+Just an empty room. Nicely painted one!  There are paths to North and to Northwest.
+Paths:
+n room yggdrasil
+nw room artemis
+w bifrost bridge
+Activated: yes
+
+Name: room yggdrasil
+Activated
+Long Description:
+The Universe if wrapped up in this room.  The walls are filled with fabric of cosmos. There is no ceiling, the sky keeps going on forever.  In the middle of the room stands the world tree Yggdrasil.  Under the tree is the Book of Thoth, the Book of all knowledge.  There is only one door here to the South.
+Short Description:
+The room that paints the Universe. The Yggdrasil is in the center of the room.  Under the tree is the Book of Thoth.  Only one door to the South.
+Items List:
+yggdrasil
+book of thoth
+Paths:
+s tales of time
+thegate room of wizard
+
+Name: room artemis
+Activated
+Long Description:
+An empty, dark room.  There's only glittering light of the stars coming from dark, vast night sky.  Oh wait, there is a pillar in the middle of the room. Why is this room named after the goddess of the Moon I wonder?  There's only two way, coming back to the Southeast or go forth to the West.
+Short Description:
+It's dark. The only thing in the room is the pillar.  Path to the Southeast or the West.
+Hidden Form:
+The room is bathed in silver light of the moon.
+Items List:
+moon pillar
+Paths:
+se tales of time
+
+Name: bifrost bridge
+Long Description:
+There is actually a room behind the wall. There is this huge structure leads toward an floating island.  There is a sea of stars in between. A rainbow bridge connects the two parts!  West to the island or East to the Tales of Time Room!
+Short Description:
+There is a rainbow bridge here.  West to the island or East to the Tales of Time Room!
+Paths:
+e tales of time
+w middle of bifrost bridge
+
+Name: middle of bifrost bridge
+Activated
+Long Description:
+The famous rainbow bridge connecting Asgard to the other eight worlds.  All the stars of the Universe is beneath me! The stars look reachable!  West to the island or East to the Tales of Time Room!
+Short Description:
+Under me is the sea of stars, they are as close as I can reach them! West to the island or East to the Tales of Time Room!
+Paths:
+w asgard
+e tales of time
+
+Name: asgard
+Activated
+LD:
+A flying island. There is a key floating in the center of it! East to go back to the Tales of Time!
+SD:
+A flying island. There is a key floating in the center of it!  East to go back to the Tales of Time!
+Items List:
+key of janus
+Paths:
+e tales of time
+
+Name: room of wizard
+LD:
+A long hall way with one side having 7 statues presenting 7 deadly sins and the other side with 10 figures of the 10 commandments!  In the end of the hall way is a man floating in mid air.  Path back to the South.
+SD:
+The room where the wizard rests.  Path back to the South.
+Items List:
+wizard
+Paths:
+
+Name: city
+LD:
+In a blink of an eye, you got back to the city! A giant octopus is ramping the city, destroying the towers!!!!  Someone gotta do something!!!  ...  Wait! I should be able to do something!!!
+SD:
+A giant octopus monster, I gotta do something!
+Items List:
+octopus
+Paths:
