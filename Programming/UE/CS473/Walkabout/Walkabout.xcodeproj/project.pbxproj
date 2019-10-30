@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54DC271523674FF30014F882 /* CheckPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DC271423674FF30014F882 /* CheckPoint.swift */; };
 		54DE9A3423610813004DBB82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE9A3323610813004DBB82 /* AppDelegate.swift */; };
 		54DE9A3623610813004DBB82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE9A3523610813004DBB82 /* SceneDelegate.swift */; };
 		54DE9A3823610813004DBB82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE9A3723610813004DBB82 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54DC271423674FF30014F882 /* CheckPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPoint.swift; sourceTree = "<group>"; };
 		54DE9A3023610813004DBB82 /* Walkabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DE9A3323610813004DBB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54DE9A3523610813004DBB82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				54DE9A3323610813004DBB82 /* AppDelegate.swift */,
 				54DE9A3523610813004DBB82 /* SceneDelegate.swift */,
 				54DE9A3723610813004DBB82 /* ViewController.swift */,
+				54DC271423674FF30014F882 /* CheckPoint.swift */,
 				54DE9A3923610813004DBB82 /* Main.storyboard */,
 				54DE9A3F23610818004DBB82 /* Assets.xcassets */,
 				54DE9A4123610818004DBB82 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				54DE9A3823610813004DBB82 /* ViewController.swift in Sources */,
 				54DE9A3423610813004DBB82 /* AppDelegate.swift in Sources */,
 				54DE9A3623610813004DBB82 /* SceneDelegate.swift in Sources */,
+				54DC271523674FF30014F882 /* CheckPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
