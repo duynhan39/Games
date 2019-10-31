@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -21,7 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var totalDistance: Double = 0 {
         didSet {
-            distanceLabel.text = String(totalDistance)
+            displayTotalDistance()
         }
     }
     
@@ -40,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var avgSpeed: Double = 0 {
         didSet {
-            avgSpeedLabel.text = String(avgSpeed)
+            dispalyAvgSpeed()
         }
     }
     
@@ -49,7 +50,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var currentSpeed: Double = 0 {
         didSet {
-            currentSpeedLabel.text = String(currentSpeed)
+            dispalyCurrentSpeed()
         }
     }
     
@@ -73,7 +74,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         configureLocationManager()
         configureMap()
         configureUI()
-//        configureTimer()
         
         prepareToStartRecording()
     }
@@ -145,14 +145,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
             addPin(at: location, with: "End")
             
-            setupAfterStopRecording()
+//            setupAfterStopRecording()
+            saveRecord()
             
         } else {
             prepareToStartRecording()
             
             startLabel.text = "Stop"
             startButton.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            
             startTimer()
+            
             checkPoints += [location]
             addPin(at: location, with: "Begin")
         }
@@ -172,6 +175,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     private func saveRecord() {
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newTrip = Trip()
+        newTrip.checkPoints = checkPoints
+        newTrip.startTime = startTime
+        newTrip.endTime = checkPoints.last?.timestamp
+        newTrip.avgSpeed = avgSpeed
+        
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
     
     private func prepareToStartRecording() {
@@ -192,9 +212,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
     
-    private func updateTotalDistance() {
-        
-    }
     
     var timerUpdateInterval = Double() {
         didSet {
@@ -221,36 +238,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     private func displayTraveledTime() {
-        var traveledTimeText : String
-        var traveledTimeUnitText : String
-        var displayedNumber : Double = 0
-        switch traveledTime {
-        case 0...60:
-            traveledTimeUnitText = "s"
-            timerUpdateInterval = 0.1
-            displayedNumber = traveledTime
-        case 60..<3600:
-            traveledTimeUnitText = "m"
-            timerUpdateInterval = 6
-            displayedNumber = traveledTime/60
-        case 3600..<3600*24:
-            traveledTimeUnitText = "hr"
-            timerUpdateInterval = 360
-            displayedNumber = traveledTime/3600
-        case (3600*24)...:
-            traveledTimeUnitText = "d"
-            timerUpdateInterval = 360*24
-            displayedNumber = traveledTime/(3600*24)
-        default:
-            traveledTimeUnitText = "s"
-            timerUpdateInterval = -1
-            displayedNumber = 0
-        }
-        
-        traveledTimeText = String(format: "%.1f", displayedNumber)
-        timeLabel.text = traveledTimeText
-        timeUnitLabel.text = traveledTimeUnitText
-
+        (timeLabel.text, timeUnitLabel.text, timerUpdateInterval) = DataFormater.getDisplayTime(of: traveledTime)
+    }
+    
+    private func displayTotalDistance() {
+        (distanceLabel.text, distanceUnitLabel.text) = DataFormater.getDisplayDistance(of: totalDistance)
+    }
+    
+    private func dispalyCurrentSpeed() {
+        (currentSpeedLabel.text, currentSpeedUnitLabel.text) = DataFormater.getDisplaySpeed(of: currentSpeed)
+    }
+    
+    private func dispalyAvgSpeed() {
+        (avgSpeedLabel.text, avgSpeedUnitLabel.text) = DataFormater.getDisplaySpeed(of: avgSpeed)
     }
     
     
@@ -259,9 +259,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if isRecording {
             if checkPoints.count > 0 {
                 createPolyline(from: checkPoints.last!.coordinate, to: currentLocation.coordinate)
+                updateDisplayData(currentLocation: currentLocation)
             }
             checkPoints += [currentLocation]
         }
+    }
+    
+    private func updateDisplayData(currentLocation : CLLocation) {
+        totalDistance += currentLocation.distance(from: checkPoints.last!)
+        currentSpeed = currentLocation.speed
+        avgSpeed = totalDistance / (Date().timeIntervalSince(startTime))
     }
     
     func createPolyline(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
@@ -277,18 +284,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
-        
         return MKOverlayRenderer()
     }
-    
-    
-    
-    
     
 }
 
 extension CLLocation {
-
     static func averageSpeed(of points: [CLLocation]) -> Double? {
         if points.count < 2 { return nil }
 
