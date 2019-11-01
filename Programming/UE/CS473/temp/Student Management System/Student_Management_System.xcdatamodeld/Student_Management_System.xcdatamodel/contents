@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A602" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
+        <attribute name="departmentCode" optional="YES" attributeType="String"/>
+        <attribute name="descriptionID" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="meetingDay" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <relationship name="enrolledBy" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Student" inverseName="enrolledIn" inverseEntity="Student"/>
+        <relationship name="instructedBy" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Professor" inverseName="instruct" inverseEntity="Professor"/>
+    </entity>
+    <entity name="Professor" representedClassName="Professor" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionID" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="homeAddress" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="officeAddress" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="instruct" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Course" inverseName="instructedBy" inverseEntity="Course"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="campusAddress" optional="YES" attributeType="String"/>
+        <attribute name="descriptionID" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="enrolledIn" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Course" inverseName="enrolledBy" inverseEntity="Course"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-657.73828125" positionY="-373.61328125" width="128" height="178"/>
+        <element name="Professor" positionX="-569.39453125" positionY="-654.82421875" width="128" height="163"/>
+        <element name="Student" positionX="-742.703125" positionY="-657.93359375" width="128" height="178"/>
+    </elements>
+</model>
