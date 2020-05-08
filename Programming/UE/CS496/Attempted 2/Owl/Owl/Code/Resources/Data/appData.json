@@ -1,0 +1,65 @@
+{
+    "gmail":{
+        "id":1,
+        "name": "gmail",
+        "officialName": "Gmail",
+        "url": "https://gmail.com",
+    },
+    "outlook":{
+        "id":2,
+        "name": "outlook",
+        "officialName": "Outlook",
+        "url": "https://outlook.office.com/mail/",
+    },
+    "messenger":{
+        "id":3,
+        "name": "messenger",
+        "officialName": "Messenger",
+        "url": "https://messenger.com",
+    },
+    "instagram":{
+        "id":4,
+        "name": "instagram",
+        "officialName": "Instagram",
+        "url": "https://instagram.com/",
+    },
+    "whatsapp":{
+        "id":5,
+        "name": "whatsapp",
+        "officialName": "Whatsapp",
+        "url": "https://whatsapp.com/",
+    },
+    "trello":{
+        "id":6,
+        "name": "trello",
+        "officialName": "Trello",
+        "url": "https://trello.com/",
+    },
+    "github":{
+        "id":7,
+        "name": "github",
+        "officialName": "GitHub",
+        "url": "http://github.com/",
+    },
+    "bitbucket":{
+        "id":8,
+        "name": "bitbucket",
+        "officialName": "Bitbucket",
+        "url": "https://bitbucket.org/",
+    },
+    "youtube":{
+        "id":10,
+        "name": "youtube",
+        "officialName": "YouTube",
+        "url": "https://www.youtube.com/",
+    },
+    "tumblr":{
+        "id":11,
+        "name": "tumblr",
+        "officialName": "Tumblr",
+        "url": "https://www.tumblr.com/",
+    }
+    
+}
+
+

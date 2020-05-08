@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "922D5573-E750-405C-BF46-84416B0500C9"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C4F560E-3A8E-4C0A-8D5E-512AA3E473A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Owl/Code/Login/CreateAccountView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A66E24E-6244-4781-B584-BC67C0373D77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Owl/Code/WorkSpace/SideBarAppListing.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8A66E24E-6244-4781-B584-BC67C0373D77 - 8a654fb8f8f6bb8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Owl.App&gt;, Swift.Int, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.contextMenu&lt;A where A1: SwiftUI.View&gt;(menuItems: () -&gt; A1) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in Owl.SideBarAppListing.body.getter : some"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Attempted%202/Owl/Owl/Code/WorkSpace/SideBarAppListing.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "8A66E24E-6244-4781-B584-BC67C0373D77 - 550b2bff13f7abe2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Owl.App) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.contextMenu&lt;A where A1: SwiftUI.View&gt;(menuItems: () -&gt; A1) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Owl.App&gt;, Swift.Int, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.contextMenu&lt;A where A1: SwiftUI.View&gt;(menuItems: () -&gt; A1) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in Owl.SideBarAppListing.body.getter : some"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Attempted%202/Owl/Owl/Code/WorkSpace/SideBarAppListing.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "190">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

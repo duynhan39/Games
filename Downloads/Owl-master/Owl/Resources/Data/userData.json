@@ -1,0 +1,47 @@
+{
+    "firstName": "Nhân",
+    "lastName": "Cao",
+    "userID": 0,
+    "workSpaces":
+    [
+        {
+            "id": 1,
+            "title": "Work",
+            "description": "Work stuff",
+            "apps" : [
+                {
+                    "name": "gmail",
+                    "id": 1
+                },
+                {
+                    "name": "outlook",
+                    "id": 2
+                }
+            ]
+            
+            
+        },
+        {
+            "id": 2,
+            "title": "Personal",
+            "description": "My stuff",
+            "apps" :[
+                {
+                    "name": "messenger",
+                    "id": 3
+                },
+                {
+                    "name": "instagram",
+                    "id": 4
+                },
+                {
+                    "name": "whatsapp",
+                    "id": 5
+                }
+            ]
+        }
+        
+    ],
+    "appIDCounter": 5,
+    "workSpaceIDCounter": 2
+}
